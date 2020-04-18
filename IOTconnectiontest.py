@@ -1,4 +1,3 @@
-
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
 
 import json
@@ -23,9 +22,6 @@ myAWSIoTMQTTClient.configureEndpoint(host, port)
 myAWSIoTMQTTClient.configureCredentials(caPath, keyPath, certPath)
 myAWSIoTMQTTClient.connect()
 
+ini_string = {'Hi thing connection test': 1}
 
-myAWSIoTMQTTClient.publish(pubTopic, "Hi", 1)
-
-
-
-
+myAWSIoTMQTTClient.publish(pubTopic,json.dumps(ini_string), 1)
