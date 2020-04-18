@@ -7,7 +7,7 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 a=9
 img_index=1
 def distMap(frame1, frame2):
-    """outputs pythagorean distance between two frames"""
+   
     frame1_32 = np.float32(frame1)
     frame2_32 = np.float32(frame2)
     diff32 = frame1_32 - frame2_32
