@@ -18,8 +18,7 @@ def distMap(frame1, frame2):
 cv2.namedWindow('frame')
 cv2.namedWindow('dist')
  
-#capture video stream from camera source. 0 refers to first camera,
-#1 referes to 2nd and so on.
+
 cap = cv2.VideoCapture("http://192.168.137.136:8080/video")
  
 _, frame1 = cap.read()
@@ -52,10 +51,7 @@ while(True):
             cv2.imwrite(frame_name, frame2)
             print("saved", frame_name)
             img_index +=1
-            a=a+1
-            if a==10: 
-                print("i love u") 
-                a=0
+            
             
  
     cv2.imshow('frame', frame2)
